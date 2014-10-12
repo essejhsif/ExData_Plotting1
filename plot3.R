@@ -3,11 +3,11 @@
 # Load and open the household_power_consumption.txt file
 setwd("/Users/jessefish/Desktop/Coursera")
 file<-file("household_power_consumption.txt")
-open(myFile)
+open(file)
 
 # Read relevant data from file, then close 
 data <- read.table(file, skip=66637, sep=";", nrow=69518-66638) 
-close(myFile)
+close(file)
 
 # Png multiple time series file (480x480) plotted with relevant data from file with correct axis names
 # including the appropriate days of the week ('Thurs,' 'Fri', 'Sat') for x axis and coloring
